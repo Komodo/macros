@@ -7,6 +7,7 @@
  * Type:  Startup
  * Usage: "Tools > Insert Column Numbers" menu
  *
+ * @source        https://github.com/Komodo/macros
  * @author        Todd Whiteman
  * @version       0.1
  */
