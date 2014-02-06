@@ -9,7 +9,6 @@ This is a collection of useful Komodo macros.
     - [Incremental Numbering](#incremental-numbering)
 - [How to Install](#installing)
 - [Contributing](#contributing)
-- [Building Komodo](#building-komodo)
 
 
 ## Macros
@@ -38,4 +37,5 @@ Komodo macro editor.
 
 ## Contributing
 
-Please submit a pull request to have your macro added to this list.
+Got a handy macro yourself? Please submit a pull request to have your macro
+added to this list.
