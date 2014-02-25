@@ -5,6 +5,7 @@ This is a collection of useful Komodo macros.
 ## Table of Contents
 
 - [List of Macros](#macros)
+    - [Wrap Text](#wrap-text)
     - [PHPDoc and JSDoc](#phpdoc-and-jsdoc)
     - [Incremental Numbering](#incremental-numbering)
 - [How to Install](#installing)
