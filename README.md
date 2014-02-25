@@ -13,6 +13,13 @@ This is a collection of useful Komodo macros.
 
 ## Macros
 
+### Wrap Text
+
+Wrap the editor selection with arbitrary text. Easily enclose text with HTML
+tags or stringify a selection.
+
+See the [code](text_wrapper.js).
+
 ### PHPDoc and JSDoc
 
 Automatically adds PHPdoc (or JSDoc) comments, including a summary, to your PHP
