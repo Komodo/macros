@@ -8,6 +8,7 @@ This is a collection of useful Komodo macros.
     - [Wrap Text](#wrap-text)
     - [PHPDoc and JSDoc](#phpdoc-and-jsdoc)
     - [Incremental Numbering](#incremental-numbering)
+    - [Copy Find Results](#copy-find-results)
 - [How to Install](#installing)
 - [Contributing](#contributing)
 
@@ -37,6 +38,13 @@ Make a column selection in the editor, then for each column insert a number and
 have the number incremented for each subsequent row in the selection.
 
 See the [code](column_incremental_numbering.js).
+
+### Copy Find Results
+
+A macro that will copy the existing Find Results onto the clipboard. Note:
+There can be two find results pane opened - this only works on the first one.
+
+See the [code](find_results_copy.js).
 
 ## Installing
 
