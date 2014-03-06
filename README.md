@@ -9,6 +9,7 @@ This is a collection of useful Komodo macros.
     - [PHPDoc and JSDoc](#phpdoc-and-jsdoc)
     - [Incremental Numbering](#incremental-numbering)
     - [Copy Find Results](#copy-find-results)
+    - [Automagic Snippets From Text](#automagic-snippets-from-text)
 - [How to Install](#installing)
 - [Contributing](#contributing)
 
@@ -45,6 +46,13 @@ A macro that will copy the existing Find Results onto the clipboard. Note:
 There can be two find results pane opened - this only works on the first one.
 
 See the [code](find_results_copy.js).
+
+### Automagic Snippets From Text
+
+Create a snippet from selected text, add a name and automatically open properties
+to add keybinding.
+
+See the [code](automagic_snippets_from_text.js).
 
 ## Installing
 
