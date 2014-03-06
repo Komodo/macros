@@ -1,3 +1,17 @@
+/**
+ * Create a snippet from selected text, add a name and automatically open
+ * properties to add keybinding.
+ *
+ * A popup UI allows creation of the snippet name
+ *
+ * Type:  keybound
+ * Usage: Add a keybinding of your liking in it's properties
+ *
+ * @source        https://github.com/Komodo/macros
+ * @author        Carey Hoffman
+ * @version       0.1
+ */
+
 // Create a base snippet with the selected text
 scimoz = ko.views.manager.currentView.scimoz;
 var snip =
