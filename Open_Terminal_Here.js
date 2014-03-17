@@ -3,41 +3,56 @@
  *
  * @source https://github.com/Komodo/macros
  * @author Nathan Rijksen
- * @version 0.1
+ * @version 0.2
  */
 
-if ((typeof extensions) == 'undefined')
-{
-    extensions = {};
-}
-
+// Register namespace
+if ((typeof extensions) == 'undefined') extensions = {};
 extensions.OpenTerminalHere = {};
 
 (function()
  {
 
+    // Get places pane document object
     var d = document.getElementById('placesViewbox').contentDocument;
-    var mi = d.getElementById('contextOpenTerminalHere');
 
+    // Remove existing menu entry if it exists
+    var mi = d.getElementById('contextOpenTerminalHere');
     if (mi) mi.parentNode.removeChild(mi);
 
-    var d = document.getElementById('placesViewbox').contentDocument;
+    // Get the sibling element which we want to insert our menu item after
     var sibling = d.getElementById('placesContextMenu_showInFinder');
+    
+    var platform = navigator.platform.toLowerCase();
 
+    // Create our menu item
     mi = document.createElement("menuitem");
     mi.setAttribute("id", "contextOpenTerminalHere");
     mi.setAttribute("hideIf", "file project");
     mi.setAttribute("label", "Open Terminal Here");
 
+    // Add event listener for when the menu item is used
     mi.addEventListener('command', function(e)
     {
         uris = ko.places.viewMgr.getSelectedURIs()
         if ( ! uris.length) return;
         path = uris[0].replace(/^[a-zA-Z]+:\/\//,'');
 
-        ko.run.runCommand(window, 'osascript -e \'tell application "terminal"\' -e \'do script "cd \\"' + path + '\\""\' -e \'activate\' -e \'end tell\'', {env: null}, null, null, null, true, 'no-console');
+        // Prepare command for each platform
+        var command;
+        if (platform.indexOf("mac") != -1) // Mac / OSX -- terminal
+            command = 'osascript -e \'tell application "terminal"\' -e \'do script \
+                      "cd \\"' + path + '\\""\' -e \'activate\' -e \'end tell\''
+        else if (platform.indexOf("linux") != -1) // Linux -- gnome-terminal
+            command = 'gnome-terminal --working-directory="' + path + '"'
+        else if (platform.indexOf("win") != -1) // Windows -- command prompt
+            command = 'cmd /K "cd \"' + path + '\""'
+
+        // Run command, dont show output window
+        ko.run.runCommand(window, command, {env: null}, null, null, null, true, 'no-console');
     });
 
+    // Append menu item to popupmenu
     sibling.parentNode.insertBefore(mi, sibling.nextSibling);
 
 }).apply(extensions.OpenTerminalHere);
