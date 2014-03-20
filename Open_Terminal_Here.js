@@ -3,7 +3,8 @@
  *
  * @source https://github.com/Komodo/macros
  * @author Nathan Rijksen
- * @version 0.2
+ * @contributor Mathieu Strauch
+ * @version 0.3
  */
 
 // Register namespace
