@@ -48,8 +48,8 @@ extensions.OpenTerminalHere = {};
             command = 'gnome-terminal --working-directory="' + path + '"';
         else if (platform.indexOf("win") != -1) // Windows -- command prompt
         {
-            path = path.replace(/^[a-z]*:\/\//i,'');
-            command = 'cmd /K "cd \"' + path + '\""';
+            path = path.replace(/^(?:[a-z]*:\/\/|\/)/i,'');
+            command = 'start cmd /K "cd ' + path + '"';
         }
 
         // Run command, dont show output window
