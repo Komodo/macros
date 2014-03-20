@@ -42,11 +42,14 @@ extensions.OpenTerminalHere = {};
         var command;
         if (platform.indexOf("mac") != -1) // Mac / OSX -- terminal
             command = 'osascript -e \'tell application "terminal"\' -e \'do script \
-                      "cd \\"' + path + '\\""\' -e \'activate\' -e \'end tell\''
+                      "cd \\"' + path + '\\""\' -e \'activate\' -e \'end tell\'';
         else if (platform.indexOf("linux") != -1) // Linux -- gnome-terminal
-            command = 'gnome-terminal --working-directory="' + path + '"'
+            command = 'gnome-terminal --working-directory="' + path + '"';
         else if (platform.indexOf("win") != -1) // Windows -- command prompt
-            command = 'cmd /K "cd \"' + path + '\""'
+        {
+            path = path.replace(/^[a-z]*:\/\//i,'');
+            command = 'cmd /K "cd \"' + path + '\""';
+        }
 
         // Run command, dont show output window
         ko.run.runCommand(window, command, {env: null}, null, null, null, true, 'no-console');
