@@ -9,6 +9,7 @@ This is a collection of useful Komodo macros.
     - [PHPDoc and JSDoc](#phpdoc-and-jsdoc)
     - [Incremental Numbering](#incremental-numbering)
     - [Copy Find Results](#copy-find-results)
+    - [Variable Dumper](#variable-dumper)
     - [Automagic Snippets From Text](#automagic-snippets-from-text)
 - [How to Install](#installing)
 - [Contributing](#contributing)
@@ -46,6 +47,12 @@ A macro that will copy the existing Find Results onto the clipboard. Note:
 There can be two find results pane opened - this only works on the first one.
 
 See the [code](find_results_copy.js).
+
+### Variable Dumper
+
+Debug helper - generates a print statement from the current word or selection.
+
+See the [code](variable_dumper.js).
 
 ### Automagic Snippets From Text
 
