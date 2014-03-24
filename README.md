@@ -11,6 +11,7 @@ This is a collection of useful Komodo macros.
     - [Copy Find Results](#copy-find-results-code)
     - [Variable Dumper](#variable-dumper-code)
     - [Automagic Snippets From Text](#automagic-snippets-from-text-code)
+    - [Reorder lines as tower](#reorder-lines-as-tower-code)
 - [How to Install](#installing)
 - [Contributing](#contributing)
 
@@ -48,6 +49,10 @@ Debug helper - generates a print statement from the current word or selection.
 
 Create a snippet from selected text, add a name and automatically open properties
 to add keybinding.
+
+### Reorder lines as tower ([code](Reflow_tower.js))
+
+Reorder selected lines, so that the shortest will go to top and the longest goes to bottom. Useful when reordering "import" lines in Python source code.
 
 ## Installing
 
