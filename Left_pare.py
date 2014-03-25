@@ -26,5 +26,7 @@ lines = tuple(l[1:] for l in lines)
 # Select part of document
 sm.setSel(start, end)
 # Replace selection content
-sm.replaceSel('\n'.join(lines))
-
+text = '\n'.join(lines)
+sm.replaceSel(text)
+# Keep selection to allow to continue to apply this macro if use wants
+sm.setSel(start, start+len(text))
