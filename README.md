@@ -51,7 +51,7 @@ Debug helper - generates a print statement from the current word or selection.
 Create a snippet from selected text, add a name and automatically open properties
 to add keybinding.
 
-### Reorder lines as tower ([code](Reflow_tower.js))
+### Reorder lines as tower ([code](Reflow_tower.py))
 
 Reorder selected lines, so that the shortest will go to top and the longest goes to bottom. Useful when reordering "import" lines in Python source code.
 
