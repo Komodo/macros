@@ -12,12 +12,8 @@ sm = view.scimoz
 
 # Make `start` the beginning position of the first selected line,
 # and `end` the ending position of the last selected line.
-if sm.anchor < sm.currentPos:
-    start = sm.positionFromLine(sm.lineFromPosition(sm.anchor))
-    end = sm.getLineEndPosition(sm.lineFromPosition(sm.currentPos))
-else:
-    start = sm.positionFromLine(sm.lineFromPosition(sm.currentPos))
-    end = sm.getLineEndPosition(sm.lineFromPosition(sm.anchor))
+start = sm.positionFromLine(sm.lineFromPosition(sm.selectionStart))
+end = sm.getLineEndPosition(sm.lineFromPosition(sm.selectionEnd))
 
 lines = tuple(sm.getTextRange(start, end).splitlines())
 # Cut one character from the left

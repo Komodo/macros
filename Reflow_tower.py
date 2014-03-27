@@ -15,12 +15,8 @@ sm = view.scimoz
 
 # Make `start` the beginning position of the first selected line,
 # and `end` the ending position of the last selected line.
-if sm.anchor < sm.currentPos:
-    start = sm.positionFromLine(sm.lineFromPosition(sm.anchor))
-    end = sm.getLineEndPosition(sm.lineFromPosition(sm.currentPos))
-else:
-    start = sm.positionFromLine(sm.lineFromPosition(sm.currentPos))
-    end = sm.getLineEndPosition(sm.lineFromPosition(sm.anchor))
+start = sm.positionFromLine(sm.lineFromPosition(sm.selectionStart))
+end = sm.getLineEndPosition(sm.lineFromPosition(sm.selectionEnd))
 
 # Get list of selected lines. Also strip trailing spaces
 lines = [l.rstrip() for l in sm.getTextRange(start, end).splitlines()]
@@ -55,4 +51,3 @@ for g in groupedlines:
 sm.setSel(start, end)
 # Replace selection content
 sm.replaceSel('\n'.join(lines))
-
