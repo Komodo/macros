@@ -28,5 +28,5 @@ sm.setSel(start, end)
 # Replace selection content
 text = '\n'.join(lines)
 sm.replaceSel(text)
-# Keep selection to allow to continue to apply this macro if use wants
-sm.setSel(start, start+len(text))
+# Keep selection to let user continue to apply this macro
+sm.setSel(start, start+len(text.encode('utf-8')))
