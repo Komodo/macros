@@ -3,7 +3,9 @@
 #
 # Author: Nguyễn Hồng Quân (ng.hong.quan@gmail.com)
 
+import eollib
 from xpcom import components
+
 viewSvc = components.classes["@activestate.com/koViewService;1"]\
     .getService(components.interfaces.koIViewService)
 view = viewSvc.currentView
@@ -16,13 +18,13 @@ start = sm.positionFromLine(sm.lineFromPosition(sm.selectionStart))
 end = sm.getLineEndPosition(sm.lineFromPosition(sm.selectionEnd))
 
 lines = tuple(sm.getTextRange(start, end).splitlines())
-# Cut one character from the left
-lines = tuple(l[1:] for l in lines)
+# Cut one character from the left and combine lines to new text
+eol = eollib.eol2eolStr[sm.eOLMode]
+text = eol.join(l[1:] for l in lines)
 
 # Select part of document
 sm.setSel(start, end)
 # Replace selection content
-text = '\n'.join(lines)
 sm.replaceSel(text)
 # Keep selection to let user continue to apply this macro
 sm.setSel(start, start+len(text.encode('utf-8')))

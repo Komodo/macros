@@ -5,8 +5,9 @@
 #
 # Author: Nguyễn Hồng Quân (ng.hong.quan@gmail.com)
 
-
+import eollib
 from xpcom import components
+
 viewSvc = components.classes["@activestate.com/koViewService;1"]\
     .getService(components.interfaces.koIViewService)
 view = viewSvc.currentView
@@ -50,4 +51,5 @@ for g in groupedlines:
 # Select part of document
 sm.setSel(start, end)
 # Replace selection content
-sm.replaceSel('\n'.join(lines))
+eol = eollib.eol2eolStr[sm.eOLMode]
+sm.replaceSel(eol.join(lines))
