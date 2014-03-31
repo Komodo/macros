@@ -13,7 +13,7 @@ This is a collection of useful Komodo macros.
     - [Automagic Snippets From Text](#automagic-snippets-from-text-code)
     - [Reorder lines as tower](#reorder-lines-as-tower-code)
     - [Left pare](#left-pare-code)
-    - [Byte or Char Position](#Byte-and-char)
+    - [Byte or Char Position](#byte-or-char-position-code)
 - [How to Install](#installing)
 - [Contributing](#contributing)
 
@@ -40,8 +40,8 @@ have the number incremented for each subsequent row in the selection.
 
 ### Copy Find Results ([code](find_results_copy.js))
 
-A macro that will copy the existing Find Results onto the clipboard. Note:
-There can be two find results pane opened - this only works on the first one.
+A macro that will copy the existing Find Results onto the clipboard. Note: There
+can be two find results pane opened - this only works on the first one.
 
 ### Variable Dumper ([code](variable_dumper.js))
 
@@ -49,20 +49,23 @@ Debug helper - generates a print statement from the current word or selection.
 
 ### Automagic Snippets From Text ([code](automagic_snippets_from_text.js))
 
-Create a snippet from selected text, add a name and automatically open properties
-to add keybinding.
+Create a snippet from selected text, add a name and automatically open
+properties to add keybinding.
 
 ### Reorder lines as tower ([code](Reflow_tower.py))
 
-Reorder selected lines, so that the shortest will go to top and the longest goes to bottom. Useful when reordering "import" lines in Python source code.
+Reorder selected lines, so that the shortest will go to top and the longest goes
+to bottom. Useful when reordering "import" lines in Python source code.
 
 ### Left pare ([code](Left_pare.py))
 
-Remove 1 character form selected line on the left. Useful to clean code copied from _diff_ file.
+Remove 1 character form selected line on the left. Useful to clean code copied
+from _diff_ file.
 
 ### Byte or Char Position ([code](add_byte_char_pos_statusbar.js))
 
-Show the Byte or Char position of your cursor in the Statusbar beside Ln and Col.
+Show the Byte or Char position of your cursor in the Statusbar beside Ln and
+Col.
 
 ## Installing
 
