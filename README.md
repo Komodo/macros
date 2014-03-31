@@ -13,7 +13,7 @@ This is a collection of useful Komodo macros.
     - [Automagic Snippets From Text](#automagic-snippets-from-text-code)
     - [Reorder lines as tower](#reorder-lines-as-tower-code)
     - [Left pare](#left-pare-code)
-    - [Byte or Char Position](#Byte-and-char)
+    - [Byte or Char Position](#Byte-or-char-position-code)
 - [How to Install](#installing)
 - [Contributing](#contributing)
 
