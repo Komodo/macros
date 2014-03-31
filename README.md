@@ -60,7 +60,7 @@ Reorder selected lines, so that the shortest will go to top and the longest goes
 
 Remove 1 character form selected line on the left. Useful to clean code copied from _diff_ file.
 
-### Byte or Char Position([code](add_byte_char_pos_statusbar.js))
+### Byte or Char Position ([code](add_byte_char_pos_statusbar.js))
 
 Show the Byte or Char position of your cursor in the Statusbar beside Ln and Col.
 
