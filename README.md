@@ -14,6 +14,7 @@ This is a collection of useful Komodo macros.
     - [Reorder lines as tower](#reorder-lines-as-tower-code)
     - [Left pare](#left-pare-code)
     - [Byte or Char Position](#byte-or-char-position-code)
+
 - [How to Install](#installing)
 - [Contributing](#contributing)
 
