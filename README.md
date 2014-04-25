@@ -10,6 +10,7 @@ This is a collection of useful Komodo macros.
     - [Incremental Numbering](#incremental-numbering-code)
     - [Copy Find Results](#copy-find-results-code)
     - [Variable Dumper](#variable-dumper-code)
+    - [Swap Assignment](#swap-assignment-code)
     - [Automagic Snippets From Text](#automagic-snippets-from-text-code)
     - [Reorder lines as tower](#reorder-lines-as-tower-code)
     - [Left pare](#left-pare-code)
@@ -47,6 +48,11 @@ can be two find results pane opened - this only works on the first one.
 ### Variable Dumper ([code](variable_dumper.js))
 
 Debug helper - generates a print statement from the current word or selection.
+
+### Swap Assignment ([code](swap_assignment.py))
+
+Switch a variable assignment (or argument) around, so *foo = bar* will become
+*bar = foo*.
 
 ### Automagic Snippets From Text ([code](automagic_snippets_from_text.js))
 
