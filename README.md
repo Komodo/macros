@@ -15,6 +15,7 @@ This is a collection of useful Komodo macros.
     - [Reorder lines as tower](#reorder-lines-as-tower-code)
     - [Left pare](#left-pare-code)
     - [Byte or Char Position](#byte-or-char-position-code)
+    - [Img Tag Dimensions](#img-tag-dimensions-code)
 
 - [How to Install](#installing)
 - [Contributing](#contributing)
@@ -73,6 +74,11 @@ from _diff_ file.
 
 Show the Byte or Char position of your cursor in the Statusbar beside Ln and
 Col.
+
+### Img Tag Dimensions ([code](img_dimensions.js))
+Execute the macro insdie an img tag in an html file, which the src attribute
+filled in.  The macro will load the image and input the height and width of
+the image attributes with the correct dimensions
 
 ## Installing
 
