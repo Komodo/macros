@@ -28,7 +28,10 @@ if (/<img.*src=["'](.+?)["']/.test(text)) {
     alert(img.src)
     var writeTag = function() {
         if (!img.height || !img.width) {
-            ko.statusBar.AddMessage("No img info at " + img.src, 500, true);
+            ko.statusBar.AddMessage("No img info at " + img.src,
+                                    "img_dimensions_macro",
+                                    3000,
+                                    false);
         } else {
             var newText = (' height="' + img.height + '" ' +
                            ' width="' + img.width + '"');
