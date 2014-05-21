@@ -11,6 +11,7 @@ This is a collection of useful Komodo macros.
     - [Copy Find Results](#copy-find-results-code)
     - [Variable Dumper](#variable-dumper-code)
     - [Swap Assignment](#swap-assignment-code)
+    - [SCC Annotate](#scc-annotate-code)
     - [Automagic Snippets From Text](#automagic-snippets-from-text-code)
     - [Reorder lines as tower](#reorder-lines-as-tower-code)
     - [Left pare](#left-pare-code)
@@ -54,6 +55,10 @@ Debug helper - generates a print statement from the current word or selection.
 
 Switch a variable assignment (or argument) around, so *foo = bar* will become
 *bar = foo*.
+
+### SCC Annotate ([code](scc_annotate.js))
+
+Display source code control (SCC) line annotations in the left editor margin.
 
 ### Automagic Snippets From Text ([code](automagic_snippets_from_text.js))
 
