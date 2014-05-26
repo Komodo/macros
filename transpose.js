@@ -19,8 +19,16 @@ function transpose(){
     aftPos = scimoz.currentPos;
     foreChar = scimoz.getWCharAt(forePos);
     aftChar = scimoz.getWCharAt(aftPos);
-    replace(forePos, aftChar);
-    replace(aftPos, foreChar);
+    scimoz.beginUndoAction();
+    try {
+        replace(forePos, aftChar);
+        replace(aftPos, foreChar);
+        } catch(e) {
+        alert("FAIL: " + e)
+    }
+    finally {
+        scimoz.endUndoAction();
+    }
     scimoz.gotoPos(scimoz.positionAfter(curPos))
 }
 
