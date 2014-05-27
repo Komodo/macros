@@ -11,7 +11,7 @@
  *
  * @source        https://github.com/Komodo/macros
  * @author        Todd Whiteman
- * @version       0.2
+ * @version       0.3
  */
 
 // Scintilla margin parameters.
@@ -93,6 +93,11 @@ var FetchAnnotationLines = function(koFileEx) {
                     getService(Components.interfaces.koISCC);
     var scc_executable = sccSvc.executable || sccSvc.name;
     var filename = koFileEx.leafName;
+    // Double quote the paths on Windows.
+    if (navigator.platform.startsWith("Win")) {
+        scc_executable = '"' + scc_executable + '"';
+        filename = '"' + filename + '"';
+    }
     var cmd = scc_executable + ' annotate ' + filename;
     var runSvc = Components.classes["@activestate.com/koRunService;1"].
                     getService(Components.interfaces.koIRunService);
