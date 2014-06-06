@@ -15,6 +15,7 @@ This is a collection of useful Komodo macros.
     - [Automagic Snippets From Text](#automagic-snippets-from-text-code)
     - [Reorder lines as tower](#reorder-lines-as-tower-code)
     - [Left pare](#left-pare-code)
+    - [Brace Wrap Selection](#brace-wrap-selection-code)
     - [Byte or Char Position](#byte-or-char-position-code)
     - [Img Tag Dimensions](#img-tag-dimensions-code)
 
@@ -74,6 +75,12 @@ to bottom. Useful when reordering "import" lines in Python source code.
 
 Remove 1 character form selected line on the left. Useful to clean code copied
 from _diff_ file.
+
+### Brace Wrap Selection ([code](brace_wrap_selection.js))
+
+With an editor selection, pressing any of [{("\' keys will place matching braces
+or quotes around the selected text. Differs from [Wrap Text](#wrap-text-code)
+because this is a startup macro, and doesn't need to be invoked each time.
 
 ### Byte or Char Position ([code](add_byte_char_pos_statusbar.js))
 
