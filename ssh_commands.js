@@ -23,7 +23,7 @@ function getRemoteSSHConnection() {
     }
     else
     {
-        throw Error("Not an SSH connection. Please open the file through SSH.");
+        throw Error("Not an SSH connection.  Please open the file through SSH.");
     }
     return conn
 }
@@ -31,7 +31,9 @@ var conn = getRemoteSSHConnection();
 var stdout = {};
 var stderr = {};
 var command = prompt("Type a command: ");
-(command.trim() == "") ? command = "ls -la" : command = command;
+if(command.trim() == "") {
+    command = "ls -la";
+}
 var retval = conn.runCommand(command, false, stdout, stderr);
 
 ko.notifications.add('Remote Run Command',
