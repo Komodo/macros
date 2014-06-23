@@ -1,3 +1,12 @@
+/**
+ * Run this macro with a remote file open to execute an SSH command on the remote server.
+ *
+ * @source https://github.com/Komodo/macros
+ * @author Todd Whiteman
+ * @contributor Carey Hoffman
+ * @version 0.4
+ */
+
 function  getRemoteSSHConnection() {
     var remoteConnectionSvc = Components.classes["@activestate.com/koRemoteConnectionService;1"].
             getService(Components.interfaces.koIRemoteConnectionService);
