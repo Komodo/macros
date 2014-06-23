@@ -22,13 +22,14 @@ if (/<img.*src=["'](.+?)["']/.test(text)) {
     var url = RegExp.$1;
     var img = new Image();
     var baseUrl = view.koDoc.file.dirName;
-    alert(baseUrl)
     url = ko.uriparse.pathToURI(baseUrl + "//" + url);
     img.src = url;
-    alert(img.src)
     var writeTag = function() {
         if (!img.height || !img.width) {
-            ko.statusBar.AddMessage("No img info at " + img.src, 500, true);
+            ko.statusBar.AddMessage("No img info at " + img.src,
+                                    "img_dimensions_macro",
+                                    3000,
+                                    false);
         } else {
             var newText = (' height="' + img.height + '" ' +
                            ' width="' + img.width + '"');
