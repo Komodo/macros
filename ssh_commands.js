@@ -3,11 +3,11 @@
  *
  * @source https://github.com/Komodo/macros
  * @author Todd Whiteman
- * @contributor Carey Hoffman
+ * @contributor Carey Hoffman, Sergey Kislyakov
  * @version 0.4
  */
 
-function  getRemoteSSHConnection() {
+function getRemoteSSHConnection() {
     var remoteConnectionSvc = Components.classes["@activestate.com/koRemoteConnectionService;1"].
             getService(Components.interfaces.koIRemoteConnectionService);
     // Use the current file's URI.
@@ -30,9 +30,12 @@ function  getRemoteSSHConnection() {
 var conn = getRemoteSSHConnection();
 var stdout = {};
 var stderr = {};
-var retval = conn.runCommand("ls -la", false, stdout, stderr);
+var command = prompt("Type a command: ");
+if(command.trim() == "") command = "ls -la";
+var retval = conn.runCommand(command, false, stdout, stderr);
 
 ko.notifications.add('Remote Run Command',
                      ['Remote Command', "Macro Monday"],
                      'remote_run_command',
                      { severity : Components.interfaces.koINotification.SEVERITY_INFO, description : stdout.value });
+
