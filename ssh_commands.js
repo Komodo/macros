@@ -31,7 +31,7 @@ var conn = getRemoteSSHConnection();
 var stdout = {};
 var stderr = {};
 var command = prompt("Type a command: ");
-if(command.trim() == "") { command = "ls -la" }
+if(command.trim() == "") command = "ls -la";
 var retval = conn.runCommand(command, false, stdout, stderr);
 
 ko.notifications.add('Remote Run Command',
