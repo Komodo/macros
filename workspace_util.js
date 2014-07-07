@@ -1,6 +1,6 @@
 /**
- * Run this macro to swaps the positions of the character at the current caret
- * position and the next character in the line.
+ * Save workspace (all open files) to a file.  Does not have a project context,
+ * it simply saves all files that are open for easy reopning later.
  *
  * Type:  On Demand
  *
