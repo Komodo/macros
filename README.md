@@ -18,6 +18,7 @@ This is a collection of useful Komodo macros.
     - [Brace Wrap Selection](#brace-wrap-selection-code)
     - [Byte or Char Position](#byte-or-char-position-code)
     - [Img Tag Dimensions](#img-tag-dimensions-code)
+    - [Alternative Location](#alternative-location-code)
 
 - [How to Install](#installing)
 - [Contributing](#contributing)
@@ -88,9 +89,17 @@ Show the Byte or Char position of your cursor in the Statusbar beside Ln and
 Col.
 
 ### Img Tag Dimensions ([code](img_dimensions.js))
+
 Execute the macro insdie an img tag in an html file, which the src attribute
 filled in.  The macro will load the image and input the height and width of
 the image attributes with the correct dimensions
+
+### Alternative Location ([code](alternative_location.js))
+
+Adds an editor tab context menuitem for opening a komodo file in an alternative
+location. The alternative locations are read from a *locations.ini*
+configuration file in the Komodo profile directory.
+
 
 ## Installing
 
