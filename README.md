@@ -19,6 +19,7 @@ This is a collection of useful Komodo macros.
     - [Byte or Char Position](#byte-or-char-position-code)
     - [Img Tag Dimensions](#img-tag-dimensions-code)
     - [Alternative Location](#alternative-location-code)
+    - [Comment Toggle](#comment-toggle-code)
 
 - [How to Install](#installing)
 - [Contributing](#contributing)
@@ -99,6 +100,11 @@ the image attributes with the correct dimensions
 Adds an editor tab context menuitem for opening a komodo file in an alternative
 location. The alternative locations are read from a *locations.ini*
 configuration file in the Komodo profile directory.
+
+### Comment Toggle ([code](comment_toggle.py))
+
+Toggles comments (on or off) over the selected lines (or current line) of the
+editor.
 
 
 ## Installing
