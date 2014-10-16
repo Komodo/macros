@@ -23,6 +23,7 @@ extensions.OpenTerminalHere = {};
 
     // Get the sibling element which we want to insert our menu item after
     var sibling = d.getElementById('placesContextMenu_rename');
+    if ( ! sibling) return;
     
     var platform = navigator.platform.toLowerCase();
 
