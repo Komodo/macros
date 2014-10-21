@@ -9,6 +9,7 @@ This is a collection of useful Komodo macros.
     - [PHPDoc and JSDoc](#phpdoc-and-jsdoc-code)
     - [Incremental Numbering](#incremental-numbering-code)
     - [Copy Find Results](#copy-find-results-code)
+    - [Multi Row Editor Tabs](#multi-row-editor-tabs-code)
     - [Variable Dumper](#variable-dumper-code)
     - [Swap Assignment](#swap-assignment-code)
     - [SCC Annotate](#scc-annotate-code)
@@ -49,6 +50,11 @@ have the number incremented for each subsequent row in the selection.
 
 A macro that will copy the existing Find Results onto the clipboard. Note: There
 can be two find results pane opened - this only works on the first one.
+
+### Multi Row Editor Tabs ([code](editor_tabs_multiple_rows.js.js))
+
+Allow multiple rows of editor tabs. When there is not enough room for all tabs
+in a single row, the tabs will wrap around onto a new tab row.
 
 ### Variable Dumper ([code](variable_dumper.js))
 
